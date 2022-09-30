@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :monsters, only: [:index, :show]
+  resources :monsters, only: [:index, :show, :destroy]
 
-  root "monsters#index"
+  resources :tweets
+
+  root "tweets#index"
 end

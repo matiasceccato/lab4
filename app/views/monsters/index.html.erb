@@ -1,1 +1,10 @@
-<%# Update me %><%= @monsters.inspect %>
+<table>
+    <% @monsters.each do |m| %>
+        <tr>
+            <td><%= link_to m.name, monster_path(m)%></td>
+            <% if(m.tweets.count > 1) %>
+                <td>Twittero destacado!</td>
+            <% end %>
+        </tr>
+    <% end %>
+</table>
